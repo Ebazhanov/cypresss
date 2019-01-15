@@ -1,0 +1,27 @@
+{
+    "name": "cypress-template",
+    "version": "1.0.0",
+    "description": "Cypress minimal template",
+    "author": "Zhenja Bazhanov",
+    "main": "index.js",
+    "scripts": {
+        "cypress:open": "cypress open",
+        "cypress:run": "cypress run",
+        "lint": "npm run lint -- --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anniekvandijk/CypressTemplate"
+    },
+    "devDependencies": {
+        "babel-eslint": "^8.2.6",
+        "cypress": "3.0.3",
+        "cypress-cucumber-preprocessor": "1.2.2",
+        "cypress-page-object": "^1.0.0",
+        "eslint": "^5.2.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-cypress": "^2.0.1",
+        "eslint-plugin-import": "^2.14.0"
+    },
+    "dependencies": {}
+}
