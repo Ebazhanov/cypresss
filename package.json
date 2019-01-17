@@ -7,7 +7,8 @@
     "scripts": {
         "cypress:open": "cypress open",
         "cypress:run": "cypress run",
-        "lint": "npm run lint -- --fix"
+        "lint": "npm run lint -- --fix",
+        "test": "cypress run --browser chrome .integration/testnew.js"
     },
     "repository": {
         "type": "git",
