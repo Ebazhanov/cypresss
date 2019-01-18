@@ -1,32 +1,14 @@
 {
-    "name": "cypress-template",
+    "name": "cypress-comatch",
     "version": "1.0.0",
-    "description": "Cypress minimal template",
     "author": "Zhenja Bazhanov",
-    "main": "index.js",
     "scripts": {
         "cypress:open": "cypress open",
         "cypress:run": "cypress run",
-        "lint": "npm run lint -- --fix",
         "test": "cypress run --browser chrome .integration/testnew.js"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/anniekvandijk/CypressTemplate"
-    },
     "devDependencies": {
-        "babel-eslint": "^8.2.6",
         "cypress": "^3.1.4",
-        "cypress-cucumber-preprocessor": "1.2.2",
-        "cypress-page-object": "^1.0.0",
-        "eslint": "^5.2.0",
-        "eslint-config-airbnb-base": "^13.1.0",
-        "eslint-plugin-cypress": "^2.0.1",
-        "eslint-plugin-import": "^2.14.0"
-    },
-
-    "dependencies": {
-        "mocha": "^5.2.0",
-        "cypress": "^3.1.4"
+        "eslint": "^5.2.0"
     }
 }
