@@ -8,7 +8,7 @@
         "cypress:open": "cypress open",
         "cypress:run": "cypress run",
         "lint": "npm run lint -- --fix",
-        "test": "cypress run --reporter junit --browser chrome .integration/testnew.js"
+        "test": "cypress run --browser chrome .integration/testnew.js"
     },
     "repository": {
         "type": "git",
@@ -25,6 +25,8 @@
         "eslint-plugin-import": "^2.14.0"
     },
     "dependencies": {
-        "junit": "^1.4.9"
+        "ajv": "^6.7.0",
+        "junit": "^1.4.9",
+        "mocha": "^5.2.0"
     }
 }
