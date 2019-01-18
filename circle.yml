@@ -1,32 +1,80 @@
 version: 2
 
+# build job parameters as a template
+defaults: &defaults
+  working_directory: ~/app
+  docker:
+    # the Docker image with Cypress dependencies
+    - image: cypress/base:8
+      environment:
+        ## this enables colors in the output
+        TERM: xterm
+
 jobs:
   build:
-    docker:
-      # the Docker image with Cypress dependencies
-      - image: cypress/base:10
-        environment:
-          ## this enables colors in the output
-          TERM: xterm
-    working_directory: ~/app
-    parallelism: 1
+    <<: *defaults
     steps:
       - checkout
+      - run: pwd
+      - run: ls
       - restore_cache:
           keys:
             - v2-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}
             - v2-deps-{{ .Branch }}-
             - v2-deps-
-      - run: npm ci
+      - run: npm run test
       - save_cache:
           key: v2-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
             - ~/.npm
             - ~/.cache
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - .cache
+            - app
+
+  testA:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
       - run:
-          name: Running E2E tests
-          command: npm run test
+          name: Running E2E tests A
+          command: $(npm bin)/cypress run --spec cypress/integration/testnew.js --reporter junit --reporter-options "mochaFile=results/my-test-output.xml"
+      - store_test_results:
+          path: results
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
+
+
+  testB:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Running E2E tests B
+          command: $(npm bin)/cypress run --spec cypress/integration/testnew.js --reporter junit --reporter-options "mochaFile=results/my-test-output.xml"
+      - store_test_results:
+          path: results
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - testA:
+          requires:
+            - build
+      - testB:
+          requires:
+            - build
