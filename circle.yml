@@ -26,9 +26,7 @@ jobs:
       - run:
           name: Running E2E tests
           command: npm run test
-      - store_test_results:
-          path: results
       - store_artifacts:
-          path: cypress/videos
+          path: videos
       - store_artifacts:
-          path: cypress/screenshots
+          path: screenshots
