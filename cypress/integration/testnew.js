@@ -14,6 +14,6 @@ describe('My First Cypress test', function () {
 
         cy.title().should('eq', 'COMATCH: Login to manage your profile and projects');
         //cy.viewport(768, 1024);
-        cy.screenshot('Screenshot.jpg');
+        //cy.screenshot('Screenshot.jpg');
     })
 });
