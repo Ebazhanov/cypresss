@@ -1,9 +1,5 @@
 import Page from '../page-objects/Page';
-import HomePage from '../page-objects/RegistryConsultantHomePage';
-
 const page = new Page();
-const homePage = new HomePage();
-const attachFiles = require('cypress-form-data-with-file-upload');
 
 describe('My First Cypress test', () => {
 
