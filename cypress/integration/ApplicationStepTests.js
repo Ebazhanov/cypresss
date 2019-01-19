@@ -8,16 +8,11 @@ describe('Application page', () => {
             .checkTitleOfThePage('COMATCH: Consultant registration');
     });
 
-    it('Step 1', () => {
-        //Personal information
+    it('Personal information block', () => {
 
         cy.get('[name="basicProfile.title"]').should("be.visible").select('Prof. Dr.');
         cy.get('[name="basicProfile.birthDay"]').should("be.visible").select('30');
         cy.get('[name="basicProfile.firstName"]').should("be.visible").type(' ');
-
-        //Profile picture
-
-        //Contact information
 
         //Save and Continue
         cy.get('.ConsultantRegistrationStep1__Step1Form-footer').click();
