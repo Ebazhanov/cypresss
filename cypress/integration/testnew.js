@@ -1,3 +1,8 @@
+import HomePage from '../../cypress/page-objects/HomePage';
+
+const homePage = new HomePage();
+
+
 describe('My First Cypress test', () => {
 
     beforeEach(() => {
@@ -10,6 +15,7 @@ describe('My First Cypress test', () => {
     });
 
     it('Visits Cypress website and checks the title', () => {
+        homePage.clickOnLoginHere();
         cy.contains('Login here').should("be.visible").click();
         cy.get('[type="email"]').should("be.visible").type('ebazhanov@yahoo.com');
         cy.get('[type="password"]').should("be.visible").type('beHappy1');
