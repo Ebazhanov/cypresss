@@ -1,6 +1,6 @@
 import ApplicationStep1 from "./ApplicationStep1Page";
 
-export default class RegistryConsultantHomePage {
+export default class HomePage {
 
     registerNewRandomConsultant() {
         let randomNumbers = Math.random().toString(36).substring(2, 10) + 'ebazhanov@yahoo.com';

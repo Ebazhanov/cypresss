@@ -1,4 +1,4 @@
-import Step1ConsultantHomePage from "./RegistryConsultantHomePage";
+import HomePage from "./HomePage";
 
 export default class Page {
     navigateToHomePage() {
@@ -9,6 +9,6 @@ export default class Page {
                 }
             }
         );
-        return new Step1ConsultantHomePage()
+        return new HomePage()
     }
 }
