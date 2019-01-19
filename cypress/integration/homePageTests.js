@@ -11,20 +11,10 @@ describe('My First Cypress test', () => {
         page.navigateToHomePage()
     });
 
-/*    it('Go to Application page with registered user', () => {
-        homePage
-            .clickOnLoginHere()
-            .enterEmail()
-            .enterPassword()
-            .clickOnLoginButton()
-            .checkTitleOfThePage('COMATCH: Login to manage your profile and projects')
-    });*/
 
     it('Register a new consultant', () => {
-        homePage
-            .enterEmail()
-            .enterPassword()
-            .clickOnRegisterNowButton()
+/*        homePage
+            .registerNewRandomConsultant()
             .checkTitleOfThePage('COMATCH: Consultant registration');
         const files = {
             fileToUpload: new File(['.ConsultantProfilePictureUploader__input > div > div > button'], 'arun.jpg', {
@@ -34,7 +24,7 @@ describe('My First Cypress test', () => {
         cy.wait(3000);
         //cy.get('.ConsultantProfilePictureUploader__input > div > div > button').should("be.visible").click();
         cy.get('.ConsultantProfilePictureUploader__input > div > div > button').should("be.visible").then(attachFiles(files));
-        cy.wait(5000)
+        cy.wait(5000)*/
 
     });
 
