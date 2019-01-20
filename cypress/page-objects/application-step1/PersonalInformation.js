@@ -30,6 +30,9 @@ export default class ApplicationStep1 {
     }
 
     clickOnSaveAndContinueButton(){
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            return false
+        });
         cy.get('.ConsultantRegistrationStep1__Step1Form-footer button').click();
         return this;
     }

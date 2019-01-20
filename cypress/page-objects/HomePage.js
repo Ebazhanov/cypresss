@@ -1,4 +1,4 @@
-import ApplicationStep1 from "./ApplicationStep1Page";
+import PersonalInformation from "./application-step1/PersonalInformation";
 
 export default class HomePage {
 
@@ -7,7 +7,7 @@ export default class HomePage {
         cy.get('[type="email"]').should("be.visible").type(randomNumbers);
         cy.get('[type="password"]').should("be.visible").type('beHappy1');
         cy.contains('Register now').should("be.visible").click();
-        return new ApplicationStep1();
+        return new PersonalInformation();
     }
 
 }
