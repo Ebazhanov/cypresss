@@ -1,4 +1,5 @@
 import Page from '../page-objects/Page';
+import IndustryExpertise from "../page-objects/application-step2/IndustryExpertise";
 
 describe('Application page Step#2 - validation of individual fields', () => {
     beforeEach(() => {
@@ -7,11 +8,14 @@ describe('Application page Step#2 - validation of individual fields', () => {
             .registerNewRandomConsultant()
             .fillInPersonalInfo()
             .fillInContactInfo()
-            .fillInProfessionalExperience();
+            .fillInProfessionalExperience()
+            .fillInAcademicEducation();
     });
 
-    it('new', () => {
-
+    it('Several checks on step#2', () => {
+        new IndustryExpertise()
+            .checkUrlFromAddressBar('/application/step2')
+        //cy.get('.StepProgressBar__step-text').should('have.text', '');
     });
 
 
