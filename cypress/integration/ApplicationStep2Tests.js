@@ -15,8 +15,8 @@ describe('Application page Step#2 - validation of individual fields', () => {
     it('Several checks on step#2', () => {
         new IndustryExpertise()
             .checkUrlFromAddressBar('/application/step2')
-        //cy.get('.StepProgressBar__step-text').should('have.text', '');
+            .selectBankingCheckBox()
+            .assertCheckStatusOfSelectedBox('You already picked 1/5')
     });
-
 
 });

@@ -1,5 +1,5 @@
 
-## Run tests
+## How to run tests
 
 ```
 npm i
@@ -12,6 +12,8 @@ npm run test
 Build status | Description | YML
 :--- | :--- | :---
 [![CircleCI](https://circleci.com/gh/Ebazhanov/cypresss.svg?style=svg)](https://circleci.com/gh/Ebazhanov/cypresss) | Linux (CircleCI) | [circle.yml](circle.yml)
+
+#### Testing task
 
 Please implement an E2E test using the Cypress framework, which is going to test the COMATCH consultant registration flow. Please make the tests run against our staging environment available here:
 

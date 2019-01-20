@@ -26,7 +26,7 @@ describe('Application page Step#1 - validation of individual fields', () => {
         new ContactInformation()
             .enterStreetName(' ')
             .enterHouseNumber(' ')
-            .enterMobilePhoneNumber('sdfsfdsfasd')
+            .enterMobilePhoneNumber('blablabphone')
             .clickOnSaveAndContinueButton()
             .assertStreetNameErrorMessage('Street is required')
             .assertHouseNumberErrorMessage('House number is required')

@@ -6,6 +6,7 @@ export default class HomePage {
         this.enterEmailWithRandomName();
         this.enterPassword();
         this.clickOnRegisterNowButton();
+        this.checkUrlFromAddressBar('/application/step1');
         return new PersonalInformation();
     }
 
@@ -22,6 +23,11 @@ export default class HomePage {
 
     clickOnRegisterNowButton() {
         cy.contains('Register now').should("be.visible").click();
+        return this;
+    }
+
+    checkUrlFromAddressBar(url) {
+        cy.url().should('include', url);
         return this;
     }
 
