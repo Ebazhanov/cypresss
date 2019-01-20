@@ -2,7 +2,7 @@ import Page from '../page-objects/Page';
 import PersonalInformation from "../page-objects/application-step1/PersonalInformation";
 import ContactInformation from "../page-objects/application-step1/ContactInformation";
 
-describe('Application page Step#1', () => {
+describe('Application page Step#1 - validation of individual fields', () => {
     beforeEach(() => {
         new Page()
             .navigateToHomePage()
