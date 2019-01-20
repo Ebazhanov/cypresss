@@ -13,6 +13,12 @@ Build status | Description | YML
 :--- | :--- | :---
 [![CircleCI](https://circleci.com/gh/Ebazhanov/cypresss.svg?style=svg)](https://circleci.com/gh/Ebazhanov/cypresss) | Linux (CircleCI) | [circle.yml](circle.yml)
 
+
+### FYI 
+Strongly recommend you to read this [Cypress and TestCafe for end to end testing](https://medium.com/yld-engineering-blog/evaluating-cypress-and-testcafe-for-end-to-end-testing-fcd0303d2103) 
+
+```Cypress doesn’t natively support file uploads. You can do it but it’s fiddly and requires creating a File object and triggering an event in whatever shape your app expects. Native file upload support in Cypress is ``` [planned.](https://github.com/cypress-io/cypress/issues/311)
+
 #### Testing task
 
 Please implement an E2E test using the Cypress framework, which is going to test the COMATCH consultant registration flow. Please make the tests run against our staging environment available here:
@@ -30,7 +36,7 @@ however I would prefer if you can cover at least 2 different steps
 and focus more on details (e.g. 
 
 	- validation of individual fields, ![#c5f015](https://placehold.it/15/c5f015/000000?text=+)``` done```
-	- file uploads, ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) ``` in progress```
+	- file uploads, ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) ``` in progress need more time```
 	- various edge cases that you can come up with, ![#c5f015](https://placehold.it/15/c5f015/000000?text=+)```partially done```
 	- etc.). 
 
