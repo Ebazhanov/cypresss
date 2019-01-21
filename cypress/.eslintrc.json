@@ -3,9 +3,17 @@
     "cypress"
   ],
   "env": {
-    "cypress/globals": true
+    "cypress/globals": true,
+    "node": true
   },
   "extends": [
-    "plugin:cypress/recommended"
-  ]
+    "plugin:cypress/recommended",
+    "plugin:cypress-dev/general",
+    "plugin:cypress-dev/tests",
+    "plugin:cypress-dev/react"
+  ],
+  "rules": {
+    "comma-dangle": "off",
+    "no-debugger": "warn"
+  }
 }
