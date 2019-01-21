@@ -11,7 +11,7 @@ export default class HomePage {
     }
 
     enterEmailWithRandomName() {
-        let randomNumbers = Math.random().toString(36).substring(2, 10) + 'testingtask@yahoo.com';
+        const randomNumbers = Math.random().toString(36).substring(2, 10) + 'testingtask@yahoo.com';
         cy.get('[type="email"]').should("be.visible").type(randomNumbers);
         return this;
     }
