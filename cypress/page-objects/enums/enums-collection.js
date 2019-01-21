@@ -1,4 +1,4 @@
-export const TitleEnum = {
+export const titleEnum = {
         DR: "Dr.",
         PROF: "Prof.",
         PROFDR: "Prof. Dr.",

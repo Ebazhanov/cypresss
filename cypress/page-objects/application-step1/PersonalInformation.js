@@ -1,6 +1,6 @@
 import ContactInformation from "./ContactInformation";
 
-export default class ApplicationStep1 {
+export default class PersonalInformation {
 
     fillInPersonalInfo() {
         this.enterFirstName('Evgeny');

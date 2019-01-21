@@ -1,6 +1,6 @@
 import AcademicEducation from "./AcademicEducation";
 
-export default class ApplicationStep1 {
+export default class ProfessionalExperience {
 
     fillInProfessionalExperience() {
         this.enterCompany('Smava GmbH');

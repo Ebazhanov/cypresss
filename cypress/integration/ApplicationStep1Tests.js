@@ -1,7 +1,7 @@
 import Page from '../page-objects/Page';
 import PersonalInformation from "../page-objects/application-step1/PersonalInformation";
 import ContactInformation from "../page-objects/application-step1/ContactInformation";
-import {TitleEnum} from "../page-objects/enums/enums-collection";
+import {titleEnum} from "../page-objects/enums/enums-collection";
 
 describe('Application page Step#1 - validation of individual fields', () => {
     beforeEach(() => {
@@ -13,7 +13,7 @@ describe('Application page Step#1 - validation of individual fields', () => {
 
     it('Personal information block', () => {
         new PersonalInformation()
-            .selectPersonalTitle(TitleEnum.PROF)
+            .selectPersonalTitle(titleEnum.PROF)
             .selectBirthDay('30')
             .enterFirstName(' ')
             .enterLastName(' ')

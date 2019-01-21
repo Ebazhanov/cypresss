@@ -1,4 +1,4 @@
-export default class ApplicationStep1 {
+export default class AcademicEducation {
 
     fillInAcademicEducation() {
         this.enterUniversity('Freie Universität Berlin');

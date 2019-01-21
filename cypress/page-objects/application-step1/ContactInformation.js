@@ -1,6 +1,6 @@
 import ProfessionalExperience from "./ProfessionalExperience";
 
-export default class ApplicationStep1 {
+export default class ContactInformation {
 
     fillInContactInfo() {
         this.enterStreetName('Potsdamer');
