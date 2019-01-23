@@ -20,7 +20,7 @@ Strongly recommend you to read this [Cypress and TestCafe for end to end testing
 ```Cypress doesn’t natively support file uploads. You can do it but it’s fiddly and requires creating a File object and triggering an event in whatever shape your app expects. Native file upload support in Cypress is ``` [planned.](https://github.com/cypress-io/cypress/issues/311)
 
 also please be aware
-```Another possibility is visual regression testing: comparing screenshots of past runs with the current run to ensure that nothing changed. Cypress does not currently have this built-in, but it is on our radar.``` [Follow this issue](https://github.com/cypress-io/cypress/issues/495)
+```Another possibility is visual regression testing: comparing screenshots of past runs with the current run to ensure that nothing changed. Cypress does not currently have this built-in, but it is on our radar.``` [Follow this issue](https://github.com/cypress-io/cypress/issues/495) and [this one](https://github.com/cypress-io/cypress/issues/170)
 
 
 
