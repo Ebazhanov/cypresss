@@ -1,10 +1,11 @@
 import ContactInformation from "./ContactInformation";
+import credentials from '../../fixtures/newInstructor';
 
 export default class PersonalInformation {
 
     fillInPersonalInfo() {
-        this.enterFirstName('Evgeny');
-        this.enterLastName('Bazhanov');
+        this.enterFirstName(credentials.firstName);
+        this.enterLastName(credentials.lastName);
         this.selectBirthYear('1981');
         return new ContactInformation();
     }
