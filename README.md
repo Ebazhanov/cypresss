@@ -58,3 +58,37 @@ The final code / configuration will be evaluated against the following criteria:
 - time (does it take unnecessarily long due to frequent waits/sleeps, etc.) ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) ```done```
 
 As mentioned, I will be rather interested to see technical ability / creative ideas and good structure as opposed to having covered the entire flow. So the focus in this tasks should be on quality rather than quantity. 
+
+
+
+https://glebbahmutov.com/blog/zeit-now-renovate-and-app/
+
+docker-compose run cypress
+or
+docker-compose up
+or
+docker-compose up
+
+
+- to download image
+``` 
+docker-compose build
+```
+
+- to run the tests in docker
+```
+docker-compose run cypress
+```
+or
+```
+docker-compose up
+```
+
+- to print all existing docker images
+```docker images```
+
+- clean all existing docker images
+```docker system prune --volumes -a```
+
+- go inside docker 
+```docker run --rm -it your_image_here bash```
