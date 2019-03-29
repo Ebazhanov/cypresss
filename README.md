@@ -9,6 +9,38 @@ or
 npm run test
 ```
 
+In Docker
+---------
+
+- to download image
+```
+docker-compose build
+```
+
+- to run the tests in docker
+```
+docker-compose run cypress
+```
+or
+```
+docker-compose up
+```
+
+- to print all existing docker images
+```
+docker images
+```
+
+- clean all existing docker images
+```
+docker system prune --volumes -a
+```
+
+- go inside docker 
+```
+docker run --rm -it your_image_here bash
+```
+
 ### Improvements to store and randomise customer data
 
 - Create class where we to store all randomise data
