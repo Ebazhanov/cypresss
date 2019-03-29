@@ -1,7 +1,7 @@
 #
 # Testing image
 #
-FROM  cypress/browsers:chrome69
+FROM  cypress/browsers
 # dependencies will be installed only if the package files change
 WORKDIR /code
 COPY . ./
@@ -19,7 +19,3 @@ RUN npx cypress verify
 # copy what to test
 COPY cypress .
 COPY cypress.json .
-#
-# run e2e Cypress tests
-#
-RUN npm test
